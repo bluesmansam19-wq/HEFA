@@ -70,7 +70,7 @@ See [`HEFA_quickstart_EN.md`](HEFA_quickstart_EN.md) for full usage instructions
   author  = {MOMO Thierry Stéphane},
   title   = {{HEFA}: Harmonic-Envelope Fractal Analysis v1.0},
   year    = {2026},
-  url     = {https://github.com/[your-username]/HEFA},
+  url     = url = {https://github.com/bluesmansam19-wq/HEFA},
   license = {CC-BY-4.0}
 }
 ```
