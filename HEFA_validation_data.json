@@ -101,3 +101,106 @@
     }
   }
 }
+{
+  "protocol": "HEFA v1.0",
+  "validation_date": "2026-04-30",
+  "summary": {
+    "n_corpora_tested": 2,
+    "n_metrics_validated": 4,
+    "key_finding": "Higuchi D and Hurst DFA show < 1.5% deviation between 320kbps and 128kbps versions of the same music corpus across 2 independent test corpora"
+  },
+  "corpus_1": {
+    "name": "Binkontin (OCORA Burkina Faso 1999)",
+    "filename_320k": "Binkõntina.mp3",
+    "duration_sec": 1967,
+    "n_windows": 6,
+    "window_sec": 240,
+    "validation_results": {
+      "H_RS": {
+        "delta_rel_mean_pct": 1.61,
+        "delta_rel_max_pct": 3.9
+      },
+      "H_DFA": {
+        "delta_rel_mean_pct": 0.12,
+        "delta_rel_max_pct": 0.29
+      },
+      "D_Higuchi": {
+        "delta_rel_mean_pct": 0.14,
+        "delta_rel_max_pct": 0.25
+      },
+      "alpha_env": {
+        "delta_rel_mean_pct": 2.28,
+        "delta_rel_max_pct": 5.35
+      }
+    },
+    "spearman_preservation": {
+      "alpha_env_vs_position_320k": -1.0,
+      "alpha_env_vs_position_128k": -0.9,
+      "D_Higuchi_vs_position_320k": 0.5,
+      "D_Higuchi_vs_position_128k": 0.5
+    }
+  },
+  "corpus_2": {
+    "name": "Buur P4 (OCORA Burkina Faso 2007)",
+    "filename_320k": "Binkontina - partie 4.mp3",
+    "filename_128k": "Binkontina - partie 4 - Hien Bihoulèté - Topic (128k).mp3",
+    "duration_sec": 196,
+    "n_windows": 1,
+    "validation_results": {
+      "H_RS": {
+        "value_320k": 0.681,
+        "value_128k": 0.663,
+        "delta_rel_pct": -2.69
+      },
+      "H_DFA": {
+        "value_320k": 0.798,
+        "value_128k": 0.787,
+        "delta_rel_pct": -1.46
+      },
+      "D_Higuchi": {
+        "value_320k": 1.7256,
+        "value_128k": 1.7274,
+        "delta_rel_pct": 0.11
+      },
+      "alpha_env": {
+        "value_320k": 0.671,
+        "value_128k": 0.643,
+        "delta_rel_pct": -4.26
+      }
+    }
+  },
+  "cross_corpus_synthesis": {
+    "Higuchi_D_meta_invariant": {
+      "delta_corpus_1_pct": 0.14,
+      "delta_corpus_2_pct": 0.11,
+      "verdict": "Ultra-robust meta-invariant"
+    },
+    "Hurst_DFA": {
+      "delta_corpus_1_pct": 0.12,
+      "delta_corpus_2_pct": 1.46,
+      "verdict": "Very robust"
+    }
+  },
+  "audio_files_md5": {
+    "Binkontin_320k": "50a6d8b991a25225929ad63b7b0cc6a6",
+    "Binkontin_128k_Topic": "(source file not recovered — validation data preserved)",
+    "Buur_P4_320k": "4740fbec51caa9a9016b048bfc05e910",
+    "Buur_P4_128k_Topic": "59405a201fabc1acd15f2039a104d054"
+  },
+  "reproducibility": {
+    "python_version": ">= 3.8",
+    "librosa_version": ">= 0.10",
+    "numpy_version": ">= 1.20",
+    "scipy_version": ">= 1.7",
+    "implementation_file": "HEFA_implementation_complete.py",
+    "parameters": {
+      "sr_hz": 22050,
+      "frame_length_samples": 2048,
+      "hop_length_samples": 512,
+      "fs_env_hz": 43.07,
+      "hpss_margin": 3,
+      "alpha_band_hz": [0.05, 5],
+      "higuchi_kmax": 20
+    }
+  }
+}
