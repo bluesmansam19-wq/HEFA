@@ -127,7 +127,7 @@ Before publishing results obtained with HEFA, confirm that you have documented:
 
 ## 8. Citation
 
-> MOMO Thierry Stéphane (2026). *HEFA — Harmonic-Envelope Fractal Analysis: A protocol for robust fractal analysis of compressed music audio*. Version 1.0. SACEM Luxembourg / BBDA Burkina Faso / Primitive Blue. DOI: (to be assigned)
+> MOMO Thierry Stéphane (2026). *HEFA — Harmonic-Envelope Fractal Analysis: A protocol for robust fractal analysis of compressed music audio*. Version 1.0. SACEM Luxembourg / BBDA Burkina Faso / Primitive Blue. DOI: 10.5281/zenodo.20187312
 
 ---
 
